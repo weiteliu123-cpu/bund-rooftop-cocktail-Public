@@ -1,0 +1,1890 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>长虹众维外滩屋顶行业交流酒会</title>
+  <link rel="icon" href="assets/ppt-media/image2.png" />
+  <style>
+    :root {
+      --wine: #8f1238;
+      --rose: #d5164f;
+      --deep: #130b10;
+      --ink: #211820;
+      --cream: #f6efe5;
+      --paper: #fbf6ef;
+      --gold: #c89c5c;
+      --gold-soft: rgba(200,156,92,.18);
+      --glass: rgba(255,255,255,.055);
+      --glass-strong: rgba(255,255,255,.08);
+      --line: rgba(255,255,255,.16);
+      --shadow: 0 24px 80px rgba(19, 11, 16, .36);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--cream);
+      background:
+        radial-gradient(circle at 18% 12%, rgba(213,22,79,.26), transparent 31rem),
+        linear-gradient(135deg, #17070f 0%, #2d1018 44%, #0d0a0b 100%);
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", Arial, sans-serif;
+      letter-spacing: 0;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    .site-shell {
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .nav {
+      position: fixed;
+      z-index: 20;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      padding: 0 clamp(18px, 4vw, 64px);
+      background: linear-gradient(180deg, rgba(19,11,16,.88), rgba(19,11,16,.22), transparent);
+      backdrop-filter: blur(12px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      border-radius: 50%;
+      background: var(--rose);
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,.28));
+    }
+
+    .brand strong {
+      font-size: 15px;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: rgba(246,239,229,.74);
+      font-size: 13px;
+    }
+
+    .nav-links a { transition: color .2s ease; }
+    .nav-links a:hover { color: #fff; }
+
+    .progress {
+      position: fixed;
+      z-index: 30;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0;
+      background: linear-gradient(90deg, var(--gold), var(--rose));
+      box-shadow: 0 0 24px rgba(213,22,79,.6);
+    }
+
+    section {
+      position: relative;
+      padding: clamp(72px, 9vw, 128px) clamp(20px, 5vw, 80px);
+    }
+
+    section::before {
+      content: "";
+      position: absolute;
+      left: clamp(20px, 5vw, 80px);
+      right: clamp(20px, 5vw, 80px);
+      top: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(200,156,92,.22), transparent);
+      opacity: .72;
+    }
+
+    .hero::before,
+    .gallery::before,
+    .closing::before {
+      display: none;
+    }
+
+    .section-inner {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      color: rgba(246,239,229,.76);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .eyebrow {
+      text-shadow: 0 0 18px rgba(200,156,92,.08);
+    }
+
+    h1, h2, h3, p { margin: 0; }
+
+    h1 {
+      width: min(880px, 100%);
+      font-size: clamp(48px, 8vw, 116px);
+      line-height: .95;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      font-size: clamp(32px, 5vw, 72px);
+      line-height: 1.02;
+      font-weight: 800;
+      letter-spacing: -.03em;
+    }
+
+    h3 {
+      font-size: clamp(20px, 2.1vw, 30px);
+      line-height: 1.18;
+      font-weight: 750;
+    }
+
+    .lead {
+      color: rgba(246,239,229,.78);
+      font-size: clamp(16px, 1.6vw, 21px);
+      line-height: 1.8;
+    }
+
+    .soft-panel {
+      border: 1px solid rgba(255,255,255,.1);
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.035));
+      box-shadow: 0 18px 60px rgba(19,11,16,.18);
+      backdrop-filter: blur(10px);
+    }
+
+    h2,
+    .mood-quote,
+    .talent-caption,
+    .lead {
+      transition: transform .35s ease, color .35s ease, text-shadow .35s ease;
+      transform-origin: left center;
+    }
+
+    section h2:hover,
+    .mood-quote:hover,
+    .talent-caption:hover {
+      transform: translateY(-2px) scale(1.018);
+      color: #fffaf3;
+      text-shadow: 0 10px 28px rgba(200,156,92,.2);
+    }
+
+    .lead:hover {
+      transform: translateY(-1px) scale(1.008);
+      color: rgba(255,250,243,.94);
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-end;
+      padding-top: 110px;
+      isolation: isolate;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(90deg, rgba(19,11,16,.92) 0%, rgba(19,11,16,.72) 34%, rgba(19,11,16,.1) 72%),
+        linear-gradient(0deg, rgba(19,11,16,1) 0%, rgba(19,11,16,.1) 44%),
+        url("assets/ppt-media/image19.jpeg") center / cover no-repeat;
+      transform: scale(1.02);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background-image:
+        linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: linear-gradient(90deg, rgba(0,0,0,.75), transparent 70%);
+    }
+
+    .hero-content {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+      padding-bottom: clamp(48px, 8vw, 86px);
+    }
+
+    .hero-title-row {
+      display: grid;
+      grid-template-columns: 1fr minmax(220px, 320px);
+      gap: clamp(28px, 5vw, 72px);
+      align-items: end;
+    }
+
+    .hero-card {
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: var(--radius);
+      padding: 22px;
+      background: rgba(19,11,16,.52);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .hero-card .date {
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .12em;
+    }
+
+    .hero-card p {
+      margin-top: 12px;
+      color: rgba(246,239,229,.78);
+      line-height: 1.7;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .pill {
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 999px;
+      padding: 9px 13px;
+      color: rgba(246,239,229,.82);
+      background: rgba(255,255,255,.06);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .stats-ribbon {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid rgba(255,255,255,.12);
+      border-bottom: 1px solid rgba(255,255,255,.12);
+      background: rgba(19,11,16,.32);
+    }
+
+    .stat {
+      min-height: 160px;
+      padding: 28px;
+      border-right: 1px solid rgba(255,255,255,.1);
+    }
+
+    .stat:last-child { border-right: 0; }
+    .stat b {
+      display: block;
+      color: #fff;
+      font-size: clamp(34px, 5vw, 64px);
+      line-height: 1;
+    }
+    .stat span {
+      display: block;
+      margin-top: 12px;
+      color: rgba(246,239,229,.68);
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: clamp(28px, 6vw, 78px);
+      align-items: center;
+    }
+
+    .portrait-panel {
+      position: relative;
+      min-height: 620px;
+    }
+
+    .portrait-panel img {
+      width: min(460px, 92%);
+      height: 560px;
+      object-fit: cover;
+      object-position: center 18%;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-left: auto;
+      transition: transform .45s ease, box-shadow .45s ease, filter .45s ease;
+    }
+
+    .portrait-panel:hover img {
+      transform: translateY(-8px) scale(1.025);
+      box-shadow: 0 28px 60px rgba(19,11,16,.28);
+      filter: saturate(1.06);
+    }
+
+    .portrait-panel::before {
+      content: "";
+      position: absolute;
+      left: 4%;
+      top: 8%;
+      width: 64%;
+      height: 72%;
+      border: 1px solid rgba(200,156,92,.7);
+      border-radius: var(--radius);
+      z-index: -1;
+    }
+
+    .timeline {
+      margin-top: 34px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 84px 1fr;
+      gap: 16px;
+      padding: 18px 0;
+      border-top: 1px solid rgba(255,255,255,.12);
+    }
+
+    .timeline-item time {
+      color: var(--gold);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .timeline-item p {
+      color: rgba(246,239,229,.78);
+      line-height: 1.65;
+    }
+
+    .opportunity {
+      background: linear-gradient(180deg, rgba(246,239,229,.96), rgba(245,235,222,.9));
+      color: var(--ink);
+    }
+
+    .opportunity .eyebrow, .opportunity .lead { color: rgba(33,24,32,.68); }
+
+    .opportunity-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: clamp(28px, 5vw, 64px);
+      align-items: center;
+      margin-top: 44px;
+    }
+
+    .pension-visual {
+      min-height: 440px;
+      padding: clamp(22px, 4vw, 46px);
+      border-radius: var(--radius);
+      color: var(--cream);
+      background:
+        linear-gradient(145deg, rgba(143,18,56,.96), rgba(40,10,22,.98)),
+        url("assets/ppt-media/image11.png") right bottom / 45% auto no-repeat;
+      box-shadow: 0 30px 80px rgba(80,22,32,.25);
+      overflow: hidden;
+    }
+
+    .large-number {
+      margin-top: 20px;
+      font-size: clamp(76px, 11vw, 148px);
+      line-height: .9;
+      font-weight: 850;
+    }
+
+    .large-number small {
+      font-size: .22em;
+      color: rgba(246,239,229,.72);
+    }
+
+    .benefit-stack {
+      display: grid;
+      gap: 16px;
+    }
+
+    .benefit {
+      padding: 22px;
+      border: 1px solid rgba(33,24,32,.12);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.5);
+    }
+
+    .benefit strong {
+      display: block;
+      color: var(--wine);
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .benefit p {
+      color: rgba(33,24,32,.68);
+      line-height: 1.65;
+    }
+
+    .market {
+      background:
+        linear-gradient(180deg, rgba(19,11,16,.98), rgba(42,13,24,.98)),
+        url("assets/new-content/ppt-media/image7.png") center top / cover no-repeat;
+      color: var(--cream);
+    }
+
+    .market-header {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: clamp(28px, 5vw, 72px);
+      align-items: end;
+      margin-bottom: 44px;
+    }
+
+    .market-header .lead {
+      max-width: 680px;
+    }
+
+    .market-kpis {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .market-kpi {
+      min-height: 160px;
+      padding: 22px;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.085), rgba(255,255,255,.04));
+      backdrop-filter: blur(12px);
+      box-shadow: 0 18px 50px rgba(19,11,16,.16);
+      transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+    }
+
+    .market-kpi:hover,
+    .adv-card:hover,
+    .donut:hover,
+    .system-item:hover {
+      transform: translateY(-6px);
+      border-color: rgba(200,156,92,.34);
+      box-shadow: 0 24px 60px rgba(19,11,16,.22);
+    }
+
+    .market-kpi b {
+      display: block;
+      color: #fff;
+      font-size: clamp(34px, 4vw, 56px);
+      line-height: 1;
+    }
+
+    .market-kpi span {
+      display: block;
+      margin-top: 12px;
+      color: rgba(246,239,229,.68);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .opportunity-lanes {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      margin-top: 22px;
+    }
+
+    .lane-card {
+      min-height: 480px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: rgba(255,255,255,.06);
+      box-shadow: var(--shadow);
+    }
+
+    .lane-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .lane-copy {
+      padding: 26px;
+    }
+
+    .lane-copy p {
+      margin-top: 14px;
+      color: rgba(246,239,229,.72);
+      line-height: 1.7;
+    }
+
+    .system {
+      background: linear-gradient(180deg, #fbf6ef 0%, #efe4d4 100%);
+      color: var(--ink);
+    }
+
+    .system .eyebrow, .system .lead { color: rgba(33,24,32,.66); }
+
+    .system-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: clamp(28px, 5vw, 64px);
+      align-items: start;
+      margin-top: 44px;
+    }
+
+    .system-card {
+      border: 1px solid rgba(33,24,32,.12);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.66);
+      box-shadow: 0 22px 60px rgba(33,24,32,.1);
+      overflow: hidden;
+    }
+
+    .system-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      transition: transform .45s ease, filter .45s ease;
+    }
+
+    .system-card:hover img {
+      transform: scale(1.035);
+      filter: saturate(1.06);
+    }
+
+    .system-card-content {
+      padding: 26px;
+    }
+
+    .system-card-content p {
+      margin-top: 14px;
+      color: rgba(33,24,32,.68);
+      line-height: 1.7;
+    }
+
+    .system-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .system-item {
+      display: grid;
+      grid-template-columns: 74px 1fr;
+      gap: 18px;
+      padding: 22px;
+      border: 1px solid rgba(33,24,32,.12);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.6);
+      transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+    }
+
+    .system-item b {
+      color: var(--wine);
+      font-size: 22px;
+      line-height: 1;
+    }
+
+    .system-item p {
+      color: rgba(33,24,32,.68);
+      line-height: 1.65;
+    }
+
+    .talent-fit {
+      background:
+        linear-gradient(180deg, rgba(246,239,229,.98), rgba(239,228,212,.92)),
+        radial-gradient(circle at 82% 20%, rgba(200,156,92,.14), transparent 16rem);
+      color: var(--ink);
+    }
+
+    .talent-fit .eyebrow,
+    .talent-fit .lead { color: rgba(33,24,32,.68); }
+
+    .talent-layout {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: clamp(28px, 5vw, 64px);
+      align-items: start;
+      margin-top: 44px;
+    }
+
+    .talent-visual {
+      padding: 28px;
+      border: 1px solid rgba(33,24,32,.12);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.66);
+      box-shadow: 0 22px 60px rgba(33,24,32,.08);
+      box-shadow: 0 18px 50px rgba(33,24,32,.08);
+    }
+
+    .talent-gallery {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .talent-visual img {
+      width: 100%;
+      border-radius: 6px;
+      box-shadow: 0 18px 40px rgba(33,24,32,.08);
+      transition: transform .45s ease, box-shadow .45s ease;
+    }
+
+    .talent-visual:hover img {
+      transform: translateY(-6px) scale(1.018);
+      box-shadow: 0 24px 50px rgba(33,24,32,.16);
+    }
+
+    .talent-caption {
+      margin-top: 18px;
+      color: rgba(33,24,32,.66);
+      line-height: 1.65;
+    }
+
+    .talent-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .talent-item {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 18px;
+      padding: 22px;
+      border: 1px solid rgba(33,24,32,.12);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.54);
+      box-shadow: 0 10px 28px rgba(33,24,32,.06);
+    }
+
+    .talent-item b {
+      color: var(--wine);
+      font-size: 20px;
+      line-height: 1.1;
+    }
+
+    .talent-item p {
+      color: rgba(33,24,32,.7);
+      line-height: 1.65;
+    }
+
+    .advantage {
+      background:
+        linear-gradient(180deg, rgba(19,11,16,.96), rgba(31,12,19,.98)),
+        url("assets/ppt-media/image22.jpeg") center / cover fixed;
+      background-blend-mode: multiply;
+    }
+
+    .advantage-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 44px;
+    }
+
+    .adv-card {
+      min-height: 270px;
+      padding: 28px;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.035));
+      backdrop-filter: blur(12px);
+      box-shadow: 0 18px 50px rgba(19,11,16,.16);
+      transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+      overflow: hidden;
+    }
+
+    .adv-card .mark {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 26px;
+      border-radius: 50%;
+      color: #1b0d12;
+      background: var(--gold);
+      font-weight: 900;
+    }
+
+    .adv-card p {
+      margin-top: 16px;
+      color: rgba(246,239,229,.7);
+      line-height: 1.7;
+    }
+
+    .team {
+      background: #110c0f;
+    }
+
+    .team-layout {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: clamp(28px, 6vw, 70px);
+      align-items: center;
+    }
+
+    .donut-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .donut {
+      min-height: 210px;
+      padding: 24px;
+      border: 1px solid rgba(255,255,255,.13);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.035));
+      cursor: pointer;
+      box-shadow: 0 18px 50px rgba(19,11,16,.16);
+      transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+    }
+
+    .ring {
+      --value: 70;
+      --display-value: var(--value);
+      width: 116px;
+      height: 116px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      background:
+        radial-gradient(circle at center, #110c0f 0 56%, transparent 57%),
+        conic-gradient(var(--rose) calc(var(--display-value) * 1%), rgba(255,255,255,.13) 0);
+      box-shadow: inset 0 0 26px rgba(0,0,0,.35);
+    }
+
+    .ring b {
+      font-size: 28px;
+      color: #fff;
+    }
+
+    .donut p {
+      color: rgba(246,239,229,.7);
+      line-height: 1.6;
+    }
+
+    .school-strip {
+      margin-top: 36px;
+      padding: 22px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius);
+      background: rgba(246,239,229,.06);
+    }
+
+    .school-strip img {
+      width: 100%;
+      border-radius: 4px;
+      opacity: .94;
+    }
+
+    .gallery {
+      background: var(--paper);
+      color: var(--ink);
+      padding-bottom: clamp(80px, 10vw, 150px);
+    }
+
+    .gallery .eyebrow, .gallery .lead { color: rgba(33,24,32,.66); }
+
+    .masonry {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: 86px;
+      gap: 14px;
+      margin-top: 44px;
+    }
+
+    .photo {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      box-shadow: 0 20px 50px rgba(33,24,32,.14);
+      background: #ddd;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .65s ease;
+    }
+
+    .photo:hover img { transform: scale(1.055); }
+
+    .school-strip img {
+      transition: transform .45s ease, box-shadow .45s ease;
+    }
+
+    .school-strip:hover img {
+      transform: translateY(-5px) scale(1.015);
+      box-shadow: 0 24px 50px rgba(19,11,16,.18);
+    }
+    .photo::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 52%, rgba(19,11,16,.38));
+      pointer-events: none;
+    }
+
+    .photo.a { grid-column: span 5; grid-row: span 4; }
+    .photo.b { grid-column: span 3; grid-row: span 3; }
+    .photo.c { grid-column: span 4; grid-row: span 5; }
+    .photo.d { grid-column: span 4; grid-row: span 3; }
+    .photo.e { grid-column: span 3; grid-row: span 4; }
+    .photo.f { grid-column: span 5; grid-row: span 3; }
+    .photo.g { grid-column: span 4; grid-row: span 4; }
+    .photo.h { grid-column: span 4; grid-row: span 3; }
+    .photo.i { grid-column: span 4; grid-row: span 3; }
+
+    .mood {
+      background:
+        radial-gradient(circle at 12% 18%, rgba(213,22,79,.16), transparent 24rem),
+        radial-gradient(circle at 88% 24%, rgba(200,156,92,.14), transparent 20rem),
+        linear-gradient(180deg, #130b10 0%, #241019 100%);
+      color: var(--cream);
+    }
+
+    .mood .lead { color: rgba(246,239,229,.76); }
+
+    .mood-layout {
+      margin-top: 38px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(320px, .65fr);
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    .video-stage,
+    .mood-copy {
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.035));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .mood-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 22px;
+      color: rgba(246,239,229,.72);
+      font-size: 13px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .mood-kicker::before {
+      content: "";
+      width: 42px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+
+    .mood-metrics {
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .mood-metric {
+      min-width: 150px;
+      padding: 14px 16px;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 999px;
+      background: rgba(255,255,255,.045);
+      color: rgba(246,239,229,.82);
+      backdrop-filter: blur(10px);
+    }
+
+    .mood-metric b {
+      margin-right: 8px;
+      color: var(--gold);
+      font-size: 15px;
+    }
+
+    .video-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(260px, .72fr);
+      gap: 18px;
+      padding: 18px;
+      min-height: 590px;
+    }
+
+    .video-card {
+      position: relative;
+      min-height: 552px;
+      border-radius: calc(var(--radius) - 8px);
+      overflow: hidden;
+      background: rgba(255,255,255,.06);
+    }
+
+    .video-card.secondary {
+      min-height: 380px;
+      margin-top: 92px;
+      margin-bottom: 26px;
+    }
+
+    .video-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(19,11,16,.1), transparent 36%, rgba(19,11,16,.78)),
+        radial-gradient(circle at 20% 0%, rgba(255,255,255,.16), transparent 30%);
+      pointer-events: none;
+    }
+
+    .video-card video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      background: #0c0a0d;
+      transition: transform .55s ease, filter .55s ease;
+    }
+
+    .video-card:hover video {
+      transform: scale(1.03);
+      filter: saturate(1.06);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      h2,
+      .mood-quote,
+      .talent-caption,
+      .lead,
+      .portrait-panel img,
+      .system-card img,
+      .talent-visual img,
+      .school-strip img,
+      .video-card video {
+        transition: none;
+      }
+
+      section h2:hover,
+      .mood-quote:hover,
+      .talent-caption:hover,
+      .lead:hover,
+      .portrait-panel:hover img,
+      .system-card:hover img,
+      .talent-visual:hover img,
+      .school-strip:hover img,
+      .video-card:hover video {
+        transform: none;
+      }
+    }
+
+    .video-label {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 16px;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      pointer-events: none;
+    }
+
+    .video-card.primary .video-label span:first-child {
+      font-size: 18px;
+    }
+
+    .video-label span:last-child {
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.12);
+      color: rgba(246,239,229,.82);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .mood-copy {
+      position: relative;
+      padding: clamp(26px, 3vw, 38px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .mood-copy::before {
+      content: "WHY IT MATTERS";
+      position: absolute;
+      top: 18px;
+      right: 22px;
+      color: rgba(200,156,92,.18);
+      font-size: 12px;
+      letter-spacing: .28em;
+    }
+
+    .mood-quote {
+      font-size: clamp(28px, 3.2vw, 48px);
+      line-height: 1.14;
+      max-width: 460px;
+    }
+
+    .mood-text {
+      color: rgba(246,239,229,.74);
+      line-height: 1.75;
+      max-width: 480px;
+    }
+
+    .mood-points {
+      display: grid;
+      gap: 12px;
+    }
+
+    .mood-point {
+      padding: 16px 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.1);
+      background: rgba(255,255,255,.04);
+      color: rgba(246,239,229,.82);
+      line-height: 1.6;
+    }
+
+    .mood-point strong {
+      color: var(--cream);
+    }
+
+    .mood-point b {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--gold);
+      font-size: 13px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .income {
+      background:
+        linear-gradient(180deg, #130b10 0%, #271019 100%);
+      color: var(--cream);
+    }
+
+    .chart-wrap {
+      margin-top: 44px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(280px, .55fr);
+      gap: 24px;
+      align-items: end;
+    }
+
+    .bar-panel, .quote-panel {
+      border: 1px solid rgba(255,255,255,.13);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.035));
+      padding: clamp(20px, 3vw, 34px);
+      box-shadow: var(--shadow);
+    }
+
+    .bar-panel {
+      padding: clamp(26px, 4vw, 48px);
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.09), rgba(255,255,255,.035)),
+        radial-gradient(circle at 88% 18%, rgba(213,22,79,.24), transparent 18rem);
+    }
+
+    .chart-title-row {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 8px;
+    }
+
+    .chart-title-row h3 {
+      max-width: 560px;
+      font-size: clamp(28px, 3.8vw, 54px);
+    }
+
+    .chart-unit {
+      flex: none;
+      padding: 9px 12px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 999px;
+      color: rgba(246,239,229,.72);
+      font-size: 12px;
+    }
+
+    .bars {
+      display: grid;
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 54px 1fr 72px;
+      gap: 18px;
+      align-items: center;
+      color: rgba(246,239,229,.74);
+      font-size: 15px;
+      font-weight: 750;
+      cursor: pointer;
+    }
+
+    .track {
+      position: relative;
+      height: 24px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: rgba(255,255,255,.1);
+    }
+
+    .fill {
+      display: block;
+      height: 100%;
+      width: calc(var(--w) * 1%);
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--gold), var(--rose));
+      box-shadow: 0 0 20px rgba(213,22,79,.3);
+    }
+
+    .bars:hover .fill {
+      will-change: width;
+    }
+
+    .bar-row:last-child .track {
+      box-shadow: 0 0 0 1px rgba(200,156,92,.38), 0 0 34px rgba(213,22,79,.28);
+    }
+
+    .bar-row:last-child .fill {
+      background: linear-gradient(90deg, #f1c87a, #ff2a63);
+    }
+
+    .bar-row .value {
+      color: #fff;
+      text-align: right;
+      font-size: 17px;
+    }
+
+    .chart-note {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .chart-note span {
+      padding: 14px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius);
+      color: rgba(246,239,229,.76);
+      background: rgba(255,255,255,.045);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .quote-panel {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background:
+        linear-gradient(180deg, rgba(19,11,16,.08), rgba(19,11,16,.92)),
+        url("assets/ppt-media/image38.jpeg") center / cover;
+    }
+
+    .quote-panel h3 {
+      width: min(480px, 100%);
+      font-size: clamp(28px, 4vw, 56px);
+      overflow-wrap: anywhere;
+    }
+
+    .quote-panel p {
+      margin-top: 24px;
+      color: rgba(246,239,229,.76);
+      line-height: 1.7;
+    }
+
+    .closing {
+      min-height: 86vh;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(19,11,16,.94), rgba(19,11,16,.34)),
+        url("assets/new-team/closing-rooftop-hd.jpg") center / cover;
+    }
+
+    .closing h2 { max-width: 900px; }
+    .closing .lead {
+      max-width: 680px;
+      margin-top: 28px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 36px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.2);
+      color: #fff;
+      background: var(--rose);
+      font-weight: 800;
+      box-shadow: 0 18px 40px rgba(213,22,79,.25);
+    }
+
+    .button.secondary {
+      background: rgba(255,255,255,.08);
+      color: rgba(246,239,229,.9);
+      box-shadow: none;
+    }
+
+    .page-controls {
+      position: fixed;
+      z-index: 24;
+      left: 0;
+      right: 0;
+      top: 50%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 clamp(12px, 2vw, 28px);
+      pointer-events: none;
+      transform: translateY(-50%);
+    }
+
+    .page-control {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 50%;
+      color: rgba(246,239,229,.9);
+      background: rgba(19,11,16,.56);
+      box-shadow: 0 14px 40px rgba(0,0,0,.28);
+      backdrop-filter: blur(14px);
+      cursor: pointer;
+      pointer-events: auto;
+      transition: transform .2s ease, background .2s ease, opacity .2s ease;
+    }
+
+    .page-control:hover {
+      transform: scale(1.06);
+      background: rgba(143,18,56,.82);
+    }
+
+    .page-control:disabled {
+      opacity: .28;
+      cursor: default;
+      transform: none;
+    }
+
+    .page-indicator {
+      position: fixed;
+      z-index: 24;
+      right: clamp(18px, 4vw, 64px);
+      bottom: 22px;
+      min-width: 82px;
+      padding: 9px 12px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 999px;
+      color: rgba(246,239,229,.78);
+      background: rgba(19,11,16,.54);
+      backdrop-filter: blur(14px);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hero-title-row, .split, .opportunity-grid, .team-layout, .chart-wrap, .market-header, .system-grid, .talent-layout, .mood-layout {
+        grid-template-columns: 1fr;
+      }
+      .stats-ribbon { grid-template-columns: repeat(2, 1fr); }
+      .stat:nth-child(2) { border-right: 0; }
+      .stat:nth-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,.1); }
+      .stat:nth-child(3) { grid-column: 1 / -1; border-right: 0; }
+      .advantage-grid, .donut-grid, .market-kpis, .opportunity-lanes { grid-template-columns: 1fr; }
+      .chart-note { grid-template-columns: 1fr; }
+      .portrait-panel { min-height: auto; }
+      .portrait-panel img { margin: 0; width: 100%; height: 520px; }
+      .masonry {
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: 78px;
+      }
+      .photo.a, .photo.b, .photo.c, .photo.d, .photo.e, .photo.f, .photo.g, .photo.h, .photo.i {
+        grid-column: span 6;
+        grid-row: span 4;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .brand strong { font-size: 13px; }
+      .hero { min-height: 92vh; }
+      section { padding-left: 18px; padding-right: 18px; }
+      .stats-ribbon { grid-template-columns: 1fr; }
+      .stat { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.1); min-height: 128px; }
+      .stat:last-child { border-bottom: 0; }
+      .timeline-item { grid-template-columns: 1fr; }
+      .bar-row { grid-template-columns: 40px 1fr 58px; gap: 10px; }
+      .talent-item { grid-template-columns: 1fr; gap: 8px; }
+      .talent-gallery { grid-template-columns: 1fr; }
+      .video-grid { grid-template-columns: 1fr; min-height: 0; }
+      .video-card,
+      .video-card.secondary { min-height: 320px; margin: 0; }
+      .chart-title-row { align-items: start; flex-direction: column; }
+      .page-controls {
+        top: auto;
+        bottom: 18px;
+        transform: none;
+      }
+      .page-control {
+        width: 42px;
+        height: 42px;
+      }
+      .page-indicator {
+        right: 50%;
+        transform: translateX(50%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <main class="site-shell">
+    <nav class="nav">
+      <a class="brand" href="#top" aria-label="长虹众维">
+        <img src="assets/ppt-media/image2.png" alt="Always 众维标志" />
+        <strong>长虹众维 · 外滩屋顶酒会</strong>
+      </a>
+      <div class="nav-links">
+        <a href="#opportunity">养老入口</a>
+        <a href="#market">医养机会</a>
+        <a href="#team">团队画像</a>
+        <a href="#system">团队体系</a>
+        <a href="#gallery">现场图像</a>
+      </div>
+    </nav>
+    <div class="page-controls" aria-label="翻页控制">
+      <button class="page-control" id="prevPage" type="button" aria-label="上一页">‹</button>
+      <button class="page-control" id="nextPage" type="button" aria-label="下一页">›</button>
+    </div>
+    <div class="page-indicator" id="pageIndicator" aria-live="polite">01 / 08</div>
+
+    <section class="hero" id="top">
+      <div class="hero-content">
+        <div class="hero-title-row">
+          <div class="reveal">
+            <span class="eyebrow">Always Zhongwei · Bund Rooftop</span>
+            <h1>外滩屋顶行业交流酒会</h1>
+            <div class="hero-meta">
+              <span class="pill">个养商机探讨</span>
+              <span class="pill">&HEA 高端人才发布会</span>
+              <span class="pill">新时代专业保险从业者</span>
+            </div>
+          </div>
+          <aside class="hero-card reveal">
+            <div class="date">CHANGHONG ZHONGWEI</div>
+            <p>以一场面向城市精英的屋顶酒会，打开个人养老金时代下的保险新机会，也呈现长虹众维的团队审美、专业密度与人才势能。</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <div class="stats-ribbon" aria-label="关键数据">
+      <div class="stat reveal"><b data-count="150">150</b><span>当前团队人力，形成可持续增长的高素质团队底盘。</span></div>
+      <div class="stat reveal"><b data-count="87" data-suffix="%">87%</b><span>本科率，团队具备高学历、高理解力的沟通基础。</span></div>
+      <div class="stat reveal"><b data-count="25" data-suffix="%">25%</b><span>硕士学历占比，团队结构强调专业表达和持续学习能力。</span></div>
+    </div>
+
+    <section>
+      <div class="section-inner split">
+        <div class="portrait-panel reveal">
+          <img src="assets/ppt-media/image3.jpeg" alt="刘维特形象照" />
+        </div>
+        <div class="reveal">
+          <span class="eyebrow">Founder Profile</span>
+          <h2>从外企、创业到保险团队管理</h2>
+          <p class="lead" style="margin-top: 24px;">刘维特，上海理工大学德语专业毕业，曾在德国柏林交换学习，服务多家外资 500 强企业，并在芬兰、新加坡等地工作。2017 年加入友邦上海长虹家族，三年晋升业务总监，组建长虹众维团队。</p>
+          <div class="timeline">
+            <div class="timeline-item"><time>2011</time><p>毕业后进入国际化职业路径，在跨文化商业环境中积累沟通与管理经验。</p></div>
+            <div class="timeline-item"><time>2017</time><p>加入友邦上海长虹家族，同时具备房产投资、餐饮创业、线上连锁品牌经验。</p></div>
+            <div class="timeline-item"><time>2020+</time><p>晋升业务总监，带领长虹众维团队成长至 150 人。</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="opportunity" id="opportunity">
+      <div class="section-inner">
+        <span class="eyebrow reveal">Pension Opportunity</span>
+        <h2 class="reveal">个人养老金第三支柱，正在释放新的行业红利</h2>
+        <div class="opportunity-grid">
+          <div class="pension-visual reveal">
+            <h3>年存个人养老金账户</h3>
+            <div class="large-number">1.2<small> 万</small></div>
+            <p class="lead" style="max-width: 520px; margin-top: 18px;">抵税、养老储备、长期稳健配置，正在把“退休规划”从少数人的议题推向大众家庭的确定性需求。</p>
+          </div>
+          <div class="benefit-stack">
+            <div class="benefit reveal"><strong>政策入口</strong><p>个人养老金制度让养老规划从概念变成账户，降低用户理解和行动门槛。</p></div>
+            <div class="benefit reveal"><strong>长期配置</strong><p>商业养老保险在收益周期、稳定性和保障属性上，具备更适合长期承诺的表达空间。</p></div>
+            <div class="benefit reveal"><strong>专业顾问</strong><p>当客户需要解释税优、账户、产品和家庭现金流时，高素质保险从业者的价值被放大。</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="market" id="market">
+      <div class="section-inner">
+        <div class="market-header">
+          <div class="reveal">
+            <span class="eyebrow">Medical & Pension Expansion</span>
+            <h2>机会不止个养，医养账户正在打开第二增长曲线</h2>
+          </div>
+          <p class="lead reveal">新资料里最重要的增量，是把叙事从“个人养老金”升级为“养老 + 医疗 + 企业场景”的组合机会。客户需求从退休储备延伸到医疗保障，医保个人账户也让医疗险购买场景更具体。</p>
+        </div>
+
+        <div class="market-kpis">
+          <div class="market-kpi reveal"><b>8万+</b><span>AIA 个养客户数，已形成可验证的市场口碑与客户基础。</span></div>
+          <div class="market-kpi reveal"><b>4.5万+</b><span>个养新客数，说明个养不是存量维护，而是有效获客入口。</span></div>
+          <div class="market-kpi reveal"><b>3000+</b><span>个养进企业宣讲场次，适合团队化、组织化推进。</span></div>
+          <div class="market-kpi reveal"><b>2.9万+</b><span>进企业累计获客，证明企业场景可转化、可复制。</span></div>
+        </div>
+
+        <div class="opportunity-lanes">
+          <article class="lane-card reveal">
+            <img src="assets/new-content/ppt-media/image20.png" alt="个账在上海的行业机会" />
+            <div class="lane-copy">
+              <h3>养老账户：以政策入口建立长期客户关系</h3>
+              <p>个养账户适合做客户教育、企业宣讲和家庭资产配置入口。核心不是单一产品成交，而是通过政策红利建立长期信任和复购可能。</p>
+            </div>
+          </article>
+          <article class="lane-card reveal">
+            <img src="assets/new-content/ppt-media/image21.png" alt="友邦个账产品策略" />
+            <div class="lane-copy">
+              <h3>医保账户：把医疗险放进更高频的支付场景</h3>
+              <p>医保个人账户可购买医疗险后，客户对“账户余额如何用得更值”的关注会提高。医疗险产品线可以承接更现实、更高频的健康风险需求。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="advantage">
+      <div class="section-inner">
+        <span class="eyebrow reveal">Why AIA</span>
+        <h2 class="reveal">在个养普及下，商业养老保险的三个胜点</h2>
+        <div class="advantage-grid">
+          <article class="adv-card reveal">
+            <div class="mark">01</div>
+            <h3>周期更长</h3>
+            <p>相对于短周期定存，养老保险更容易建立长期账户心智，适配退休规划的时间尺度。</p>
+          </article>
+          <article class="adv-card reveal">
+            <div class="mark">02</div>
+            <h3>收益更确定</h3>
+            <p>相对于波动型基金，确定性表达更利于普通家庭理解风险与未来现金流。</p>
+          </article>
+          <article class="adv-card reveal">
+            <div class="mark">03</div>
+            <h3>顾问更稀缺</h3>
+            <p>账户政策、产品比较、家庭配置需要专业解释，这让高素质团队拥有更强竞争壁垒。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="system" id="system">
+      <div class="section-inner">
+        <span class="eyebrow reveal">Team Operating System</span>
+        <h2 class="reveal">优秀团队不是靠口号，而是靠训练、文化和协作系统</h2>
+        <p class="lead reveal" style="max-width: 820px; margin-top: 22px;">长虹家族超 950 人，长虹众维成立于 2020 年 7 月，是友邦中国屈指可数的三年成立总监团队之一。快速成长背后，是稳定培训节奏、讲师体系和共建共享共赢文化。</p>
+        <div class="system-grid">
+          <article class="system-card reveal">
+            <img src="assets/new-team/presentation-room.jpg" alt="团队培训和分享现场" />
+            <div class="system-card-content">
+              <h3>年轻团队承接新机会，需要强训练密度</h3>
+              <p>周一到周五持续培训、销售建设、演练、Call day、午餐交流和超级 V 平台，把新人培养从“个人摸索”变成“系统成长”。</p>
+            </div>
+          </article>
+          <div class="system-list">
+            <div class="system-item reveal"><b>950+</b><p>长虹家族规模基础，提供跨团队资源、经验复用和组织背书。</p></div>
+            <div class="system-item reveal"><b>20</b><p>团队讲师体系，支撑新人训练、专业表达和活动复制。</p></div>
+            <div class="system-item reveal"><b>3部</b><p>业务推动部、培训部、活动部形成运营分工，让团队增长有抓手。</p></div>
+            <div class="system-item reveal"><b>价值观</b><p>自由不是无约束，责任不是被动执行；核心是成年人对事业选择、团队承诺和个人成长负责。</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="talent-fit" id="talent">
+      <div class="section-inner">
+        <span class="eyebrow reveal">Ideal Talent</span>
+        <h2 class="reveal">我们在寻找谁：不是传统销售，而是未来的保险企业家</h2>
+        <p class="lead reveal" style="max-width: 840px; margin-top: 22px;">结合《The Elite Horizon》里的人才部分，这场活动面向的不是泛流量人群，而是已经有职业成果、资源基础和长期目标感的人。重点是吸引能把保险做成事业的人，而不是短期尝试者。</p>
+        <div class="talent-layout">
+          <article class="talent-visual reveal">
+            <div class="talent-gallery">
+              <img src="assets/HEA1.png" alt="HEA 高端人才招募计划政策支持" />
+            </div>
+            <p class="talent-caption">目标画像非常明确：高起点、成熟社会经验、较强学习能力，以及愿意在专业财富规划赛道里长期投入。</p>
+          </article>
+          <div class="talent-list">
+            <div class="talent-item reveal"><b>30W+</b><p>过往年收入 30 万及以上。团队更适合已经验证过个人能力、愿意升级平台与发展模式的人。</p></div>
+            <div class="talent-item reveal"><b>本科+</b><p>本科及以上学历，便于理解财富规划、产品结构和长期客户经营的复杂度。</p></div>
+            <div class="talent-item reveal"><b>30-45</b><p>年龄约 30-45 岁，具备较成熟的社会经验、人脉资源和行业判断。</p></div>
+            <div class="talent-item reveal"><b>目标感</b><p>具备强烈的个人发展目标与学习能力，愿意持续训练、提升表达、建立个人品牌与客户信任。</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="team" id="team">
+      <div class="section-inner team-layout">
+        <div class="reveal">
+          <span class="eyebrow">Team Portrait</span>
+          <h2>高学历、高素质、高追求的年轻化团队</h2>
+          <p class="lead" style="margin-top: 24px;">长虹众维代表的是新时代专业保险从业者：医生、律师、会计师、设计师、企业主与海归人才共同构成了团队的职业厚度，也让社交场景和专业咨询天然融合。</p>
+          <div class="school-strip">
+            <img src="assets/ppt-media/image17.png" alt="长虹众维伙伴毕业院校" />
+          </div>
+        </div>
+        <div class="donut-grid">
+          <div class="donut reveal">
+            <div class="ring" style="--value:87"><b>87%</b></div>
+            <h3>本科率</h3>
+            <p>大量国内外名校背景，理解复杂产品与高净值客户需求更快。</p>
+          </div>
+          <div class="donut reveal">
+            <div class="ring" style="--value:25"><b>25%</b></div>
+            <h3>硕士学历</h3>
+            <p>团队结构强调专业表达、长期学习和高质量服务能力。</p>
+          </div>
+          <div class="donut reveal">
+            <div class="ring" style="--value:25"><b>25%</b></div>
+            <h3>海归背景</h3>
+            <p>跨文化视野与国际化审美，让团队沟通更开放、更现代。</p>
+          </div>
+          <div class="donut reveal">
+            <div class="ring" style="--value:20"><b>20%</b></div>
+            <h3>创业经历</h3>
+            <p>更能理解企业主、职业转型者与高追求人群的真实决策逻辑。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+      <div class="section-inner">
+        <span class="eyebrow reveal">Rooftop & Team Event</span>
+        <h2 class="reveal">把专业关系，放进有品质的真实场景里</h2>
+        <p class="lead reveal" style="max-width: 780px; margin-top: 22px;">夜色、外滩、酒会、团队活动与面对面的交流，共同构成了长虹众维的品牌记忆：不是冷冰冰的职业说明，而是一种更现代的职业生活方式。</p>
+        <div class="masonry">
+          <figure class="photo a reveal"><img src="assets/new-team/rooftop-group-window.jpg" alt="外滩窗边团队酒会合影" /></figure>
+          <figure class="photo b reveal"><img src="assets/new-team/river-two-women.jpg" alt="黄浦江夜景交流" /></figure>
+          <figure class="photo c reveal"><img src="assets/new-team/portrait-group-sofa.jpg" alt="团队沙发合影" /></figure>
+          <figure class="photo d reveal"><img src="assets/new-team/business-conversation.jpg" alt="酒会商务交流" /></figure>
+          <figure class="photo e reveal"><img src="assets/new-team/billiards-team.jpg" alt="团队休闲活动" /></figure>
+          <figure class="photo f reveal"><img src="assets/new-team/toast-team-table.jpg" alt="团队餐桌举杯" /></figure>
+          <figure class="photo g reveal"><img src="assets/new-team/presentation-room.jpg" alt="行业交流分享现场" /></figure>
+          <figure class="photo h reveal"><img src="assets/new-team/award-2024-shanghai.jpg" alt="2024 友邦上海晋级典礼团队合影" /></figure>
+          <figure class="photo i reveal"><img src="assets/ppt-media/image22.jpeg" alt="外滩酒杯夜景" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="mood" id="mood">
+      <div class="section-inner">
+        <span class="eyebrow reveal">Team Atmosphere</span>
+        <h2 class="reveal">团队的轻松感，和同行者的质感，都不是包装出来的</h2>
+        <p class="lead reveal" style="max-width: 820px; margin-top: 22px;">一段视频看氛围，一段视频看伙伴。比起继续堆叠形容词，这一页直接用真实动态去呈现：长虹众维既有舒展自然的相处状态，也聚拢了一群让人愿意长期同行的人。</p>
+        <div class="mood-kicker reveal">Real moments over polished claims</div>
+        <div class="mood-metrics reveal">
+          <div class="mood-metric"><b>01</b>看见氛围</div>
+          <div class="mood-metric"><b>02</b>看见伙伴</div>
+          <div class="mood-metric"><b>03</b>看见归属感</div>
+        </div>
+        <div class="mood-layout">
+          <div class="video-stage reveal">
+            <div class="video-grid">
+              <figure class="video-card primary">
+                <video autoplay muted loop playsinline controls preload="metadata" poster="assets/new-team/rooftop-group-window.jpg">
+                  <source src="assets/videos/青山湖.mp4" type="video/mp4" />
+                </video>
+                <figcaption class="video-label">
+                  <span>青山湖 · 团队氛围</span>
+                  <span>松弛自然</span>
+                </figcaption>
+              </figure>
+              <figure class="video-card secondary">
+                <video autoplay muted loop playsinline controls preload="metadata" poster="assets/new-team/toast-team-table.jpg">
+                  <source src="assets/videos/威海.mp4" type="video/mp4" />
+                </video>
+                <figcaption class="video-label">
+                  <span>威海 · 伙伴同行</span>
+                  <span>优质同频</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <aside class="mood-copy reveal">
+            <div>
+              <div class="mood-quote">好的团队，不只让人想加入，也会让人看见自己想和谁一起走远。</div>
+              <p class="mood-text">这也是长虹众维想持续呈现给客户和伙伴的状态：专业不是紧绷，优秀也不等于疏离。真正有生命力的团队，既有结果导向，也有一群值得信任、值得同行的人。</p>
+            </div>
+            <div class="mood-points">
+              <div class="mood-point"><b>Relationship</b><strong>先让人愿意靠近，</strong>再让合作自然发生。</div>
+              <div class="mood-point"><b>Energy</b><strong>先形成同频气场，</strong>再承接长期成长。</div>
+              <div class="mood-point"><b>Trust</b><strong>先看见真实状态，</strong>再相信这是一支能一起走远的团队。</div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="income" id="income">
+      <div class="section-inner">
+        <span class="eyebrow reveal">Career Upside</span>
+        <h2 class="reveal">可视化职业路径：职级越高，收入天花板越清晰</h2>
+        <div class="chart-wrap">
+          <div class="bar-panel reveal">
+            <div class="chart-title-row">
+              <h3>2025 友邦各职级月平均收入参考</h3>
+              <span class="chart-unit">单位：万元 / 月</span>
+            </div>
+            <div class="bars" aria-label="上海月均收入柱状图，单位万">
+              <div class="bar-row"><span>A1</span><div class="track"><i class="fill" style="--w:10"></i></div><span class="value">3.8</span></div>
+              <div class="bar-row"><span>A2</span><div class="track"><i class="fill" style="--w:15"></i></div><span class="value">6.0</span></div>
+              <div class="bar-row"><span>A3</span><div class="track"><i class="fill" style="--w:20"></i></div><span class="value">7.8</span></div>
+              <div class="bar-row"><span>AM</span><div class="track"><i class="fill" style="--w:27"></i></div><span class="value">10.6</span></div>
+              <div class="bar-row"><span>M1</span><div class="track"><i class="fill" style="--w:39"></i></div><span class="value">15.2</span></div>
+              <div class="bar-row"><span>M2</span><div class="track"><i class="fill" style="--w:97"></i></div><span class="value">38.0</span></div>
+              <div class="bar-row"><span>M3</span><div class="track"><i class="fill" style="--w:100"></i></div><span class="value">39.0</span></div>
+            </div>
+            <div class="chart-note">
+              <span>从 A1 到 M1，收入曲线进入明显上升段。</span>
+              <span>M2 / M3 体现管理职级的职业杠杆。</span>
+              <span>图表用于说明路径空间，具体收入以公司口径为准。</span>
+            </div>
+          </div>
+          <aside class="quote-panel reveal">
+            <div>
+              <h3>ALWAYS YOUNG AND BEAUTIFUL</h3>
+              <p>高颜值不是表面标签，而是对职业状态、生活品质、审美表达和长期成长的综合呈现。</p>
+            </div>
+            <div class="hero-meta">
+              <span class="pill">高学历</span>
+              <span class="pill">高素质</span>
+              <span class="pill">高追求</span>
+              <span class="pill">年轻化</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" id="closing">
+      <div class="section-inner reveal">
+        <span class="eyebrow">Join Always Zhongwei</span>
+        <h2>期待更多优质伙伴加入我们，踩上一波新的养老时代红利。</h2>
+        <p class="lead">长虹众维希望连接那些既专业、又有审美与生命力的人，把保险职业做成一条更体面、更长期、更值得被看见的路径。</p>
+        <div class="cta-row">
+          <a class="button" href="#top">回到开场</a>
+          <a class="button secondary" href="#gallery">查看现场</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const progress = document.getElementById('progress');
+    const revealItems = [...document.querySelectorAll('.reveal')];
+    const counters = [...document.querySelectorAll('[data-count]')];
+    const pageStops = [...document.querySelectorAll('.hero, .stats-ribbon, main > section:not(.hero)')];
+    const prevPage = document.getElementById('prevPage');
+    const nextPage = document.getElementById('nextPage');
+    const pageIndicator = document.getElementById('pageIndicator');
+    let activePage = 0;
+
+    function formatCounter(el, value) {
+      const suffix = el.dataset.suffix || '';
+      const decimal = Number(el.dataset.decimal || 0);
+      const display = decimal ? value.toFixed(decimal) : Math.round(value).toString();
+      return display + suffix;
+    }
+
+    const counterObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = Number(el.dataset.count);
+        let start = 0;
+        const duration = 1100;
+        const startTime = performance.now();
+        function tick(now) {
+          const t = Math.min((now - startTime) / duration, 1);
+          const eased = 1 - Math.pow(1 - t, 3);
+          const current = start + target * eased;
+          el.textContent = formatCounter(el, current);
+          if (t < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+        counterObserver.unobserve(el);
+      });
+    }, { threshold: .45 });
+
+    counters.forEach(el => counterObserver.observe(el));
+
+    function animateNumber(el, target, suffix = '', duration = 900) {
+      const startTime = performance.now();
+      el.textContent = `0${suffix}`;
+      function tick(now) {
+        const t = Math.min((now - startTime) / duration, 1);
+        const eased = 1 - Math.pow(1 - t, 3);
+        el.textContent = `${Math.round(target * eased)}${suffix}`;
+        if (t < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+
+    function animateRing(ring) {
+      const target = Number(getComputedStyle(ring).getPropertyValue('--value'));
+      const label = ring.querySelector('b');
+      const startTime = performance.now();
+      ring.style.setProperty('--display-value', '0');
+      if (label) label.textContent = '0%';
+      function tick(now) {
+        const t = Math.min((now - startTime) / 900, 1);
+        const eased = 1 - Math.pow(1 - t, 3);
+        const current = target * eased;
+        ring.style.setProperty('--display-value', current.toFixed(2));
+        if (label) label.textContent = `${Math.round(current)}%`;
+        if (t < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+
+    function animateBars(group) {
+      group.querySelectorAll('.bar-row').forEach((row, index) => {
+        const fill = row.querySelector('.fill');
+        const value = row.querySelector('.value');
+        const targetWidth = Number(getComputedStyle(fill).getPropertyValue('--w'));
+        const targetValue = Number(value.textContent);
+        fill.style.width = '0%';
+        value.textContent = '0.0';
+        const startTime = performance.now() + index * 70;
+        function tick(now) {
+          const t = Math.min(Math.max((now - startTime) / 900, 0), 1);
+          const eased = 1 - Math.pow(1 - t, 3);
+          fill.style.width = `${targetWidth * eased}%`;
+          value.textContent = (targetValue * eased).toFixed(1);
+          if (t < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      });
+    }
+
+    document.querySelectorAll('.donut').forEach(card => {
+      card.addEventListener('mouseenter', () => animateRing(card.querySelector('.ring')));
+    });
+
+    document.querySelectorAll('.bars').forEach(group => {
+      group.addEventListener('mouseenter', () => animateBars(group));
+    });
+
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('is-visible');
+      });
+    }, { threshold: .12 });
+
+    revealItems.forEach(el => revealObserver.observe(el));
+
+    function updateProgress() {
+      const scrollTop = window.scrollY;
+      const doc = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.width = `${doc > 0 ? (scrollTop / doc) * 100 : 0}%`;
+      const viewportAnchor = scrollTop + window.innerHeight * 0.38;
+      activePage = pageStops.reduce((best, section, index) => {
+        return Math.abs(section.offsetTop - viewportAnchor) < Math.abs(pageStops[best].offsetTop - viewportAnchor) ? index : best;
+      }, 0);
+      pageIndicator.textContent = `${String(activePage + 1).padStart(2, '0')} / ${String(pageStops.length).padStart(2, '0')}`;
+      prevPage.disabled = activePage === 0;
+      nextPage.disabled = activePage === pageStops.length - 1;
+    }
+
+    function goToPage(direction) {
+      const nextIndex = Math.max(0, Math.min(pageStops.length - 1, activePage + direction));
+      pageStops[nextIndex].scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    prevPage.addEventListener('click', () => goToPage(-1));
+    nextPage.addEventListener('click', () => goToPage(1));
+    window.addEventListener('keydown', event => {
+      const tag = document.activeElement?.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+      if (event.key === 'ArrowRight' || event.key === 'PageDown' || event.key === ' ') {
+        event.preventDefault();
+        goToPage(1);
+      }
+      if (event.key === 'ArrowLeft' || event.key === 'PageUp') {
+        event.preventDefault();
+        goToPage(-1);
+      }
+    });
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+  </script>
+</body>
+</html>
